@@ -1,0 +1,69 @@
+evenNum = int(input("Enter the numbers of even numbers to be produced "))
+oddNum = int(input("Enter the numbers of odd numbers to be produced "))
+
+Num_list = []
+
+
+
+even_number = 2
+odd_number = 1
+
+
+# producing even numbers
+for i in range(evenNum):
+    
+    
+    Num_list.append(even_number)
+    even_number = even_number + 2
+    
+# producing odd numbers    
+for i in range(oddNum):
+    
+    Num_list.append(odd_number)
+    odd_number = odd_number + 2
+    
+    
+    
+# print(Num_list) 
+
+# sorting the list in ascending order
+list2 = sorted(Num_list)
+
+#new list to hold the results(photos)
+newlist = []
+
+
+numberOfItems = evenNum + oddNum
+
+
+
+for i in range (numberOfItems):
+    
+    if (list2[i])%2 ==0:
+        num = list2[i]
+        
+        for i in range (numberOfItems):
+           
+            if(list2[i])%2 != 0 and list2[i] < num:
+                newlist.append("")
+                newlist.append(num)
+                newlist.append(list2[i])
+                newlist.append("")
+                
+                i = i + 1
+
+    elif (list2[i])%2 !=0:
+        num = list2[i]
+        
+        for i in range (numberOfItems):
+           
+            if(list2[i])%2 == 0 and list2[i] < num:
+                newlist.append('')
+                newlist.append(num)
+                newlist.append(list2[i])
+                newlist.append('')
+                
+                i = i + 1
+            
+
+print(newlist)
